@@ -1,0 +1,274 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Edit Spare Log</strong>
+            <small> New</small>
+            <div class="pull-right">
+              <button class="btn btn-sm btn-primary" style="width:100px" (click)="sparelogAdd()"> Add Spare Log</button>
+              &nbsp;
+                <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack()"><i class="fa fa-reply"></i></button>
+            </div>
+          </div>
+          <div class="card-body">
+  
+            <!-- form content -->
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+  
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-header">
+                    Edit and submit the form to modify an existing Spare Log
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Spare ID</span>
+                          </div>
+                          <input type="text" id="spare_id" formControlName="spare_id" name="spare_id" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-diamond"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Location ID</span>
+                        </div>
+                        <input type="text" id="location_id" formControlName="location_id" name="location_id" class="form-control">
+                        <div class="input-group-append">
+                          <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Quantity</span>
+                          </div>
+                          <input type="number" id="quantity" formControlName="quantity" name="quantity" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-calculator"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Transaction Code</span>
+                            </div>
+                            <input type="text" id="transaction_code" formControlName="transaction_code" name="transaction_code" class="form-control">
+                            <div class="input-group-append">
+                              <span class="input-group-text"><i class="icon-tag"></i></span>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Description</span>
+                              </div>
+                              <input type="text" id="description" formControlName="description" name="description" class="form-control">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                              </div>
+                            </div>
+                          </div>
+  
+                        <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Order Type</span>
+                              </div>
+                              <input type="text" id="order_type" formControlName="order_type" name="order_type" class="form-control">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">Description</span>
+                                </div>
+                                <input type="text" id="description" formControlName="description" name="description" class="form-control">
+                                <div class="input-group-append">
+                                  <span class="input-group-text"><i class="icon-book-open"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">Spare Request Assignment ID</span>
+                                  </div>
+                                  <input type="text" id="spare_request_assignment_id" formControlName="spare_request_assignment_id" name="spare_request_assignment_id" class="form-control">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text"><i class="icon-pin"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">Spare Sales ID</span>
+                                    </div>
+                                    <input type="text" id="spare_sales_id" formControlName="spare_sales_id" name="spare_sales_id" class="form-control">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text"><i class="icon-bubbles"></i></span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text">spare_purchase_id</span>
+                                      </div>
+                                      <input type="text" id="spare_purchase_id" formControlName="spare_purchase_id" name="spare_purchase_id" class="form-control">
+                                      <div class="input-group-append">
+                                        <span class="input-group-text"><i class="icon-bubbles"></i></span>
+                                      </div>
+                                    </div>
+                                  </div>
+  
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+  
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Spare Transfer ID</span>
+                          </div>
+                          <input type="text" id="spare_transfer_id" formControlName="spare_transfer_id" name="spare_transfer_id" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Recipient Type</span>
+                          </div>
+                          <input type="text" id="recipient_type" formControlName="recipient_type" name="recipient_type" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                        <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Staff Recipient ID</span>
+                              </div>
+                              <input type="text" id="staff_recipient_id" formControlName="staff_recipient_id" name="staff_recipient_id" class="form-control">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="icon-chart"></i></span>
+                              </div>
+                            </div>
+                          </div>
+  
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Driver Recipient ID</span>
+                        </div>
+                        <input type="text" id="driver_recipient_id" formControlName="driver_recipient_id" name="driver_recipient_id" class="form-control">
+                        <div class="input-group-append">
+                          <span class="input-group-text"><i class="icon-layers"></i></span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Customer Recipient ID</span>
+                          </div>
+                          <input type="TEXT" id="customer_recipient_id" formControlName="customer_recipient_id" name="customer_recipient_id" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-money"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Supplier Recipient ID</span>
+                          </div>
+                          <input type="text" id="supplier_recipient_id" formControlName="supplier_recipient_id" name="supplier_recipient_id" class="form-control" autocomplete="email">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Spare Staff</span>
+                            </div>
+                            <input type="text" id="spare_staff" formControlName="spare_staff" name="spare_staff" class="form-control" autocomplete="email">
+                            <div class="input-group-append">
+                              <span class="input-group-text"><i class="fa fa-book"></i></span>
+                            </div>
+                          </div>
+                        </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Spare Staff Remark</span>
+                          </div>
+                          <input type="text" id="spare_staff_remark" formControlName="spare_staff_remark" name="spare_staff_remark" class="form-control" >
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Transaction Date</span>
+                            </div>
+                            <input type="date" id="transaction_date" formControlName="transaction_date" name="transaction_date" class="form-control" >
+                            <div class="input-group-append">
+                              <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                          </div>
+                        </div>
+  
+                    <div class="form-group form-actions pull-right">
+                      <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+  
+          </div><!--/.row-->
+        </form>
+            <!--/. form content -->
+  
+          </div>
+        </div>
+      </div>
+    </div><!--/.row-->
+  </div>
+  

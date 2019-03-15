@@ -1,0 +1,98 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Add Spare Stock</strong>
+            <small> New</small>
+            <div class="pull-right">
+                <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack()"><i class="fa fa-reply"></i></button>
+            </div>
+          </div>
+          <div class="card-body">
+  
+            <!-- form content -->
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <div class="card">
+                <div class="card-header">
+                  Complete and submit the form to create a new Spare Stock
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Spare Location ID</span>
+                          </div>
+                          <input type="text" id="spare_location_id" formControlName="spare_location_id" name="spare_location_id" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-diamond"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Spare Stock ID</span>
+                        </div>
+                        <input type="text" id="spare_dictionary_id" formControlName="spare_dictionary_id" name="spare_dictionary_id" class="form-control">
+                        <div class="input-group-append">
+                          <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Quantity</span>
+                          </div>
+                          <input type="number" id="quantity" formControlName="quantity" name="quantity" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-calculator"></i></span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Stock In</span>
+                            </div>
+                            <input type="text" id="stock_in" formControlName="stock_in" name="stock_in" class="form-control">
+                            <div class="input-group-append">
+                              <span class="input-group-text"><i class="icon-tag"></i></span>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Stock Out</span>
+                              </div>
+                              <input type="text" id="stock_out" formControlName="stock_out" name="stock_out" class="form-control">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group form-actions pull-right">
+                              <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                            </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2"></div>
+          </div><!--/.row-->
+        </form>
+            <!--/. form content -->
+  
+          </div>
+        </div>
+      </div>
+    </div><!--/.row-->
+  </div>
+  

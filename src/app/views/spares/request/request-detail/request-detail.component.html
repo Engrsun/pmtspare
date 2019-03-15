@@ -1,0 +1,144 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-6 col-md-2">
+      <a routerLink="/spares/category">
+       <div class="card text-white bg-info">
+        <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-grid"></i>
+          </div>
+          <div class="h6 text-muted text-uppercase mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Category</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-2">
+        <a routerLink="/spares/stock">
+         <div class="card text-white bg-success">
+         <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-notebook"></i>
+          </div>
+          <div class="h6 text-muted text-uppercase mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Stock</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+         </div>
+      </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-2">
+     <a routerLink="/spares/location">
+      <div class="card text-white bg-warning">
+           <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-location-pin"></i>
+          </div>
+          <div class="h6 text-muted text-uppercase mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Location</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+         </div>
+      </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-2">
+     <a routerLink="/spares/log">
+      <div class="card text-white bg-primary">
+            <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-pie-chart"></i>
+          </div>
+          <div class="h6 text-muted mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Log</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            </div>
+      </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-2">
+     <a routerLink="/spares/request">
+      <div class="card text-white bg-danger">
+            <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-speedometer"></i>
+          </div>
+          <div class="h6 text-muted text-uppercase mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Request</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            </div>
+      </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-md-2">
+      <a routerLink="/spares/transfer">
+      <div class="card text-white bg-info">
+           <div class="card-body">
+          <div class="h1 text-muted text-right mb-4">
+            <i class="icon-paper-plane"></i>
+          </div>
+          <div class="h6 text-muted text-uppercase mb-0">Spare</div>
+          <small class="h6 text-uppercase font-weight-bold">Transfer</small>
+          <div class="progress progress-white progress-xs mt-3">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+           </div>
+      </div>
+      </a>
+    </div><!--/.col-->
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h2>{{ code || ' Spare Request Detail' }}</h2>
+          <div class="pull-right">
+              <button class="btn btn-sm btn-primary" style="width:100px" (click)="sparerequestEdit(sparerequest)"> Edit</button>
+              <button class="btn btn-sm btn-info" style="width:100px" (click)="goBack()"><i class="fa fa-reply"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          
+          <br>
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <thead class="thead-light">
+              <tr><th>Field</th><th>Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Id</th><td>{{ id || '' }}</td></tr>
+              <tr><th>Request Date</th><td>{{ request_date | date }}</td></tr>
+              <tr><th>Code</th><td>{{  code || '' }}</td></tr>
+              <tr><th>PMT Maintenance ID</th><td>{{ pmt_maintenance_id || '' }}</td></tr>
+              <tr><th>Spare ID</th><td>{{ spare_id || '' }}</td></tr>
+              <tr><th>Quantity</th><td>{{ quantity || '' }}</td></tr>
+              <tr><th>User Type</th><td>{{ user_type || '' }}</td></tr>
+              <tr><th>Recipient Staff ID</th><td>{{ recipient_staff_id || '' }}</td></tr>
+              <tr><th>Recipient Driver ID</th><td>{{ recipient_driver_id || '' }}</td></tr>
+              <tr><th>Vehicle ID</th><td>{{ vehicle_id || '' }}</td></tr>
+              <tr><th>Description</th><td>{{ description || '' }}</td></tr>
+              <tr><th>Approved Date</th><td>{{ approved_date | date }}</td></tr>
+              <tr><th>Approved By</th><td>{{ approved_by || '' }}</td></tr>
+              <tr><th>Issued Date</th><td>{{ issued_date | date }}</td></tr>
+              <tr><th>Issued By</th><td>{{ issued_by || '' }}</td></tr>
+              <tr><th>Issuer Remark</th><td>{{ issuer_remark || '' }}</td></tr>
+              <tr><th>Location ID</th><td>{{ location_id || '' }}</td></tr>
+              <tr><th>Request Status</th><td>{{ request_status || '' }}</td></tr>
+              <tr><th>Issue Status</th><td>{{ issue_status || '' }}</td></tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>
